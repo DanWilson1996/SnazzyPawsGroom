@@ -1,0 +1,182 @@
+/* General Styles */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-image: url('images/paws header.jpg');
+    width: 100%;
+    background-size: 43%;
+    background-position: center;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.darken {
+    background-image:
+    linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url('images/paws\ header.jpg');
+    background-size:cover;
+    background-position: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    color: white;
+    text-shadow: rgb(0, 0, 0, 0.7) 0px 2px 5px;
+}
+
+.content-container {
+    display: flex; /* Enables side-by-side layout */
+    gap: 20px; /* Space between the image and welcome containers */
+    align-items: flex-start; /* Align items to the top */
+}
+
+.image-container {
+    max-width: 300px; /* Limits the width of the image container */
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    gap: 20px; /* Space between images */
+}
+
+.welcome-container {
+    flex: 1; /* Take the remaining space in the row */
+    display: flex; /* Enables flexbox layout */
+    justify-content:flex-start /* Aligns content to the left */
+    padding: 20px; /
+}
+
+.welcome-container section {
+    background: #c7c5c5; /* Light background for the container */
+    padding: 20px; /* Adjust spacing inside the container */
+    border: 1px solid #aaaaaa;
+    border-radius: 10px;
+    max-width: 1000px; /* Adjust width to fit nicely next to the image container */
+    box-shadow: 0 4px 6px rgba(126, 31, 31, 0.1);
+}
+
+
+nav {
+    background: #956f00;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+/* Main Content */
+
+
+main{
+    flex: 1;
+}
+
+section {
+    padding: 100px 100px 100px 100px;
+}
+
+h1, h2 {
+    color: #956f00;
+}
+
+h3 {
+    color:#956f00;
+    text-align: center;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+    display:flex;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); /* Makes columns flexible */
+    gap: 20px;
+    padding:20px;
+}
+
+.gallery-grid img {
+    width: 50%;
+    height:auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    object-fit:cover;
+}
+
+.gallery-grid img:hover { 
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); 
+}
+
+/* Form */
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input, form textarea, form select, form button {
+    width: 95%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Footer */
+footer {
+    background: #956f00;
+    color: #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        font-size: 14px;
+    }
+
+    table, th, td {
+        font-size: 12px;
+    }
+
+    form {
+        padding: 5px;
+    }
+}
